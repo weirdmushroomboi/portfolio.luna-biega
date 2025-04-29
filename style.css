@@ -1,104 +1,84 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  background-color: #f8f4e3;
+  color: #2e2e2e;
+  line-height: 1.6;
 }
 
-body, html {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #FF6F00, #D32F2F);
-  color: #fff;
-  scroll-behavior: smooth;
-}
-
-.video-header {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.video-header video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.4);
-}
-
-.overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(6px);
-  padding: 30px 50px;
-  border-radius: 12px;
-}
-
-.overlay h1 {
-  font-size: 56px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.overlay p {
-  font-size: 24px;
-  color: #FFCCBC;
-}
-
-.projets {
-  padding: 60px 20px;
-  background-color: #fff;
-  color: #D32F2F;
+header {
+  background: linear-gradient(to right, #375b3e, #a43c2c);
+  color: white;
+  padding: 40px;
   text-align: center;
 }
 
-.projets h2 {
-  margin-bottom: 40px;
+header h1 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
   font-size: 40px;
-  color: #D32F2F;
 }
 
-.galerie {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.galerie a {
-  text-decoration: none;
-  color: inherit;
-  width: 280px;
-  border: 2px solid #FF6F00;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.galerie a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.galerie img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.galerie h3 {
-  margin: 15px;
+header p {
+  margin: 10px 0 0;
   font-size: 20px;
-  color: #D32F2F;
+}
+
+nav {
+  background-color: #6b4e3d;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 16px;
+}
+
+nav a {
+  color: #f8f4e3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.section h2 {
+  color: #a43c2c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+}
+
+.skills,
+.projects,
+.contact {
+  display: grid;
+  gap: 24px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li::before {
+  content: "\2022";
+  color: #375b3e;
+  font-weight: bold;
+  display: inline-block;
+  width: 16px;
+  margin-left: -16px;
 }
 
 footer {
-  background-color: #D32F2F;
-  color: #fff;
+  background-color: #375b3e;
+  color: white;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
+  padding: 16px;
+  margin-top: 40px;
 }
