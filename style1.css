@@ -1,14 +1,18 @@
-/* Général */
-html, body {
-  height: 100%;
+/* Reset & base */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Noto Sans', sans-serif;
-  background-color: #fff;
-  color: #222;
+  box-sizing: border-box;
 }
 
-/* Header cohérent avec l'index */
+html, body {
+  height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+/* Header identique à l'index */
 header {
   position: fixed;
   top: 0;
@@ -37,9 +41,88 @@ nav a:hover {
   color: #BD2323;
 }
 
-/* Section principale de contact */
+/* Main section */
 .contact-main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 20
+  min-height: 100vh;
+  padding-top: 80px; /* Espace pour le header */
+}
+
+/* Formulaire stylisé comme index */
+.contact-form-section {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form-section h2 {
+  color: #BD2323;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #BD2323;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #9a1e1e;
+}
+
+/* Footer comme sur index */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .contact-form-section {
+    padding: 20px;
+  }
+
+  .contact-form-section h2 {
+    font-size: 1.5rem;
+  }
+}
