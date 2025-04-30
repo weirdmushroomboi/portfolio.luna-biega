@@ -24,6 +24,15 @@ header {
   z-index: 10;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+  padding-top: 80px;
+}
+
 nav {
   display: flex;
   justify-content: center;
