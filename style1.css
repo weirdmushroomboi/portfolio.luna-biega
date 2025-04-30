@@ -1,19 +1,18 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+body, html {
+  height: 100%;
   font-family: 'Noto Sans', sans-serif;
-  line-height: 1.6;
-  color: #222;
   background-color: #fff;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  color: #222;
 }
 
+/* HEADER FIXED */
 header {
   position: fixed;
   top: 0;
@@ -21,16 +20,7 @@ header {
   width: 100%;
   min-height: 50px;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 10;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  padding: 20px;
-  padding-top: 100px;
+  z-index: 1000;
 }
 
 nav {
@@ -51,95 +41,66 @@ nav a:hover {
   color: #BD2323;
 }
 
+/* MAIN CENTRÉ AVEC MARGE POUR HEADER */
 main {
+  min-height: 100vh;
+  padding-top: 100px; /* pour éviter de passer sous le header */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  padding: 20px;
 }
 
-.section {
-  max-width: 900px;
+/* FORMULAIRE */
+form {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   width: 100%;
+  max-width: 500px;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  color: #BD2323;
   text-align: center;
 }
 
-h2 {
-  font-size: 2rem;
-  color: #BD2323;
-  margin-bottom: 20px;
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-label {
-  font-size: 1rem;
-  color: #333;
-  text-align: left;
-  width: 100%;
-}
-
-input, textarea {
+form input,
+form textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-button {
+form button {
+  margin-top: 20px;
   padding: 10px 20px;
   background-color: #BD2323;
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button:hover {
+form button:hover {
   background-color: #9a1e1e;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  color: white;
-  margin-top: auto;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-  }
-
+/* RESPONSIVE */
+@media screen and (max-width: 600px) {
   form {
-    width: 90%;
-  }
-
-  h2 {
-    font-size: 1.5rem;
+    padding: 20px;
   }
 }
