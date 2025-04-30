@@ -1,9 +1,11 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base */
 body {
   font-family: 'Noto Sans', sans-serif;
   line-height: 1.6;
@@ -11,6 +13,7 @@ body {
   background-color: #fff;
 }
 
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -39,6 +42,7 @@ nav a:hover {
   color: #BD2323;
 }
 
+/* Hero section */
 .hero {
   position: relative;
   height: 100vh;
@@ -66,9 +70,10 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent plein écran */
   z-index: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -77,6 +82,11 @@ nav a:hover {
 .hero-overlay h1, .hero-overlay p {
   position: relative;
   z-index: 2;
+  color: white;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
 }
 
 .hero-overlay p {
@@ -84,6 +94,7 @@ nav a:hover {
   margin-top: 10px;
 }
 
+/* Sections */
 .section {
   padding: 60px 20px;
   max-width: 900px;
@@ -100,6 +111,7 @@ ul {
   list-style: inside disc;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -107,7 +119,7 @@ footer {
   color: white;
 }
 
-/* Profil photo container */
+/* À propos photo + texte */
 .profil-container {
   display: flex;
   gap: 20px;
@@ -117,7 +129,7 @@ footer {
 .profil-photo {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 10px;
   object-fit: cover;
 }
 
@@ -126,7 +138,6 @@ footer {
 }
 
 /* Compétences icon */
-/* Section compétences */
 .competences-icons {
   display: flex;
   justify-content: space-around;
@@ -140,20 +151,14 @@ footer {
 }
 
 .competence img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   transition: transform 0.3s ease;
 }
 
 .competence img:hover {
   transform: scale(1.1);
 }
-
-.competences-icons .competence img {
-  width: 70px;
-  height: 70px;
-}
-
 
 /* Contact button */
 .contact-btn {
