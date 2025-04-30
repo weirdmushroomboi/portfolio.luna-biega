@@ -1,56 +1,45 @@
-/* S'assure que le body prend toute la hauteur de la fenêtre */
+/* Général */
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #fff;
+  color: #222;
 }
 
-/* Centrage complet de la section de contact */
-.contact-main {
-  min-height: 100vh;
+/* Header cohérent avec l'index */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  padding: 20px;
-  box-sizing: border-box;
+  gap: 30px;
+  padding: 15px 0;
 }
 
-/* Bloc contenant le formulaire */
-.contact-form-section {
-  width: 100%;
-  max-width: 500px;
-  background-color: #f8f8f8;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-/* Titre du formulaire */
-.contact-form-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
+nav a:hover {
   color: #BD2323;
 }
 
-/* Style du formulaire */
-.contact-form {
+/* Section principale de contact */
+.contact-main {
   display: flex;
-  flex-direction: column;
-}
-
-.contact-form label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: 'Noto Sans', sans-serif;
-}
-
-.contact-form button {
-  background-color: #BD2323;
-  color:
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20
