@@ -1,18 +1,18 @@
-/* Reset & base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+body {
   font-family: 'Noto Sans', sans-serif;
-  color: #222;
   background-color: #fff;
+  color: #222;
+  min-height: 100vh;
+  padding-top: 60px;
 }
 
-/* Header identique à l'index */
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -37,92 +37,71 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   color: #BD2323;
 }
 
-/* Main section */
-.contact-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding-top: 80px; /* Espace pour le header */
+/* Formulaire */
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-/* Formulaire stylisé comme index */
-.contact-form-section {
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  width: 100%;
-  max-width: 500px;
-}
-
-.contact-form-section h2 {
+.contact-container h1 {
+  font-size: 2rem;
   color: #BD2323;
   margin-bottom: 20px;
-  text-align: center;
-  font-size: 2rem;
 }
 
-.contact-form {
+form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-.contact-form label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  font-family: 'Noto Sans', sans-serif;
+input, textarea {
+  padding: 12px;
   font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
 }
 
-.contact-form button {
+textarea {
+  height: 150px;
+}
+
+button {
   background-color: #BD2323;
-  color: white;
+  color: #fff;
   padding: 12px;
   border: none;
-  border-radius: 5px;
   font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.contact-form button:hover {
+button:hover {
   background-color: #9a1e1e;
 }
 
-/* Footer comme sur index */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  color: white;
+.success {
+  color: green;
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 15px;
 }
 
 /* Responsive */
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .contact-form-section {
-    padding: 20px;
-  }
-
-  .contact-form-section h2 {
-    font-size: 1.5rem;
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 20px 15px;
   }
 }
