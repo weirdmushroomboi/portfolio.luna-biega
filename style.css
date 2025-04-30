@@ -206,3 +206,36 @@ footer {
     align-items: center;
   }
 }
+
+.projets-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projet {
+  flex: 1 1 calc(33.333% - 20px);
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.projet img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.projet:hover img {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .projet {
+    flex: 1 1 100%;
+  }
+}
